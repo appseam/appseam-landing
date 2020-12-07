@@ -6,6 +6,10 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <form name="subscribe" netlify hidden>
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
