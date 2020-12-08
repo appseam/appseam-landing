@@ -63,16 +63,16 @@ function SubscribeForm() {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "subscribe", val})
+      body: encode({ "form-name": "appseam-early-subscriptions", ...val})
     })
-      .then(() => alert("Success!"))
+      .then(() => alert("Success!" + JSON.stringify(val)))
       .catch(error => alert(error));
   };
   
   return (
     <Box pad="40px">
       <Form onSubmit={({ value }) => {sendToNetlify(value)}}>
-        <input type="hidden" name="form-name" value="subscribe" />
+        <input type="hidden" name="form-name" value="appseam-early-subscriptions" />
         <FormField name="email" htmlfor="email-input" label="E-mail">
           <TextInput id="email-input" name="email" />
         </FormField>
