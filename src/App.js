@@ -21,6 +21,7 @@ const theme = {
       'purple': '#4d3b5f',
       'yellow': '#ffd42a',
       'white': '#ffffff',
+      'green': '#75ff9a',
       'brand': '#ffffff'
     },
     control: {
@@ -58,26 +59,33 @@ function encode(data) {
 }
 
 
-function SubscribeForm() {
+function SubscribeForm() {  
+  const [submitted, setSubmitted] = React.useState(false)
+
   function sendToNetlify(val) {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "appseam-early-subscriptions", ...val})
     })
-      .then(() => alert("Success!" + JSON.stringify(val)))
+      .then(res => { 
+        setSubmitted(true)
+        setTimeout(() => {
+          setSubmitted(false)
+        }, 1000); })
       .catch(error => alert(error));
   };
   
   return (
     <Box pad="40px">
       <Form onSubmit={({ value }) => {sendToNetlify(value)}}>
-        <input type="hidden" name="form-name" value="appseam-early-subscriptions" />
+        <input type="hidden" name="form-name" value="appseam-early-subscriptions"/>
         <FormField name="email" htmlfor="email-input" label="E-mail">
           <TextInput id="email-input" name="email" />
         </FormField>
         <Box direction="row" gap="medium">
-          <Button type="submit" primary label="Submit" />
+          <Button type="submit" primary label="Submit"/>
+          {submitted && (<Text style={{transition: 'all 1s ease-out 2s'}} color="green">Thanks! We'll reach out to you as soon as we can.</Text>)}
         </Box>
       </Form>
     </Box>
