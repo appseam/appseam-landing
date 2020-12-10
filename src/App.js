@@ -1,4 +1,5 @@
 import React from 'react';
+import SubscribeForm from './components/SubscribeForm'
 import {
   Box,
   Grommet, 
@@ -8,20 +9,18 @@ import {
   Carousel, 
   Image, 
   Heading, 
-  Text,
-  FormField,
-  Form,
-  TextInput,
-  Button
+  Text
  } from 'grommet'
 
 const theme = {
   global: {
     colors: {
-      'purple': '#4d3b5f',
-      'yellow': '#ffd42a',
+      'purple': '#2E294E',
+      'yellow': '#FFD400',
       'white': '#ffffff',
-      'brand': '#ffffff'
+      'green': '#75ff9a',
+      'brand': '#ffffff',
+      'red': '#C41E3D'
     },
     control: {
       border: {
@@ -37,8 +36,12 @@ const theme = {
     }
   },
   button: {
+    color: 'purple',
     border: {
-      color: '#ffffff'
+      color: 'yellow'
+    },
+    primary: {
+      color: 'yellow'
     }
   },
   anchor: {
@@ -51,46 +54,12 @@ const theme = {
   }
 }
 
-function encode(data) {
-  return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-}
-
-
-function SubscribeForm() {
-  function sendToNetlify(val) {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "appseam-early-subscriptions", ...val})
-    })
-      .then(() => alert("Success!" + JSON.stringify(val)))
-      .catch(error => alert(error));
-  };
-  
-  return (
-    <Box pad="40px">
-      <Form onSubmit={({ value }) => {sendToNetlify(value)}}>
-        <input type="hidden" name="form-name" value="appseam-early-subscriptions" />
-        <FormField name="email" htmlfor="email-input" label="E-mail">
-          <TextInput id="email-input" name="email" />
-        </FormField>
-        <Box direction="row" gap="medium">
-          <Button type="submit" primary label="Submit" />
-        </Box>
-      </Form>
-    </Box>
-  );
-}
-
-
 export default function App() {
   return (
     <Grommet theme={theme} background='purple' full={true}>
       <Nav direction="row-reverse" pad="medium">
         <Anchor label='Contact' hoverIndicator />
-        <Anchor label='About' hoverIndicator />
+        <Anchor label='What is this?' hoverIndicator />
       </Nav>
       <Grid
       rows={['75vh']}
@@ -107,7 +76,7 @@ export default function App() {
           <SubscribeForm/>
         </Box>
         <Box gridArea="right">
-          <Carousel controls="selectors" play="5000" fill>
+          <Carousel controls="selectors" play={5000} fill>
             <Image fit="cover" src="//v2.grommet.io/assets/Wilderpeople_Ricky.jpg" />
             <Image fit="cover" src="//v2.grommet.io/assets/IMG_4245.jpg" />
             <Image fit="cover" src="//v2.grommet.io/assets/IMG_4210.jpg" />
