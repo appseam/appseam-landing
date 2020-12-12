@@ -35,6 +35,9 @@ const theme = {
       }
     }
   },
+  grommet: {
+    extend: `{background-image: linear-gradient(#282343, #36305b, #443c72, #6054a0)}`
+  },
   button: {
     color: 'purple',
     border: {
