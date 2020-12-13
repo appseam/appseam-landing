@@ -29,7 +29,7 @@ export default function SubscribeForm() {
           </FormField>
           <Box direction="row" gap="medium" align='start' height='50px'>
             <Button disabled={!(email)} primary type="submit" label="Subscribe" />
-            {submitted && (<Text color="green">Thanks! You've registered with {submittedEmail}. We'll reach out to you as soon as we can.</Text>)}
+            {submitted && (<Text color="accent-1">Thanks! You've registered with {submittedEmail}. We'll reach out to you as soon as we can.</Text>)}
           </Box>
         </Form>
       </Box>
