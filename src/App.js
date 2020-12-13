@@ -1,5 +1,6 @@
-import React from 'react';
+import React from 'react'
 import SubscribeForm from './components/SubscribeForm'
+import theme from './theme'
 import {
   Box,
   Grommet, 
@@ -10,52 +11,8 @@ import {
   Image, 
   Heading, 
   Text
- } from 'grommet'
+} from 'grommet'
 
-const theme = {
-  global: {
-    colors: {
-      'purple': '#2E294E',
-      'yellow': '#FFD400',
-      'white': '#ffffff',
-      'green': '#75ff9a',
-      'brand': '#ffffff',
-      'red': '#C41E3D'
-    },
-    control: {
-      border: {
-        radius: '50px',
-        width: '2px',
-        color: 'white'
-      }
-    },
-    focus: {
-      outline: {
-        size: '0px'
-      }
-    }
-  },
-  grommet: {
-    extend: `{background-image: linear-gradient(#282343, #36305b, #443c72, #6054a0)}`
-  },
-  button: {
-    color: 'purple',
-    border: {
-      color: 'yellow'
-    },
-    primary: {
-      color: 'yellow'
-    }
-  },
-  anchor: {
-    color: 'white'
-  },
-  carousel: {
-    icons: {
-      color: 'purple'
-    }
-  }
-}
 
 export default function App() {
   return (
@@ -80,9 +37,10 @@ export default function App() {
         </Box>
         <Box gridArea="right">
           <Carousel controls="selectors" play={5000} fill>
-            <Image fit="cover" src="//v2.grommet.io/assets/Wilderpeople_Ricky.jpg" />
-            <Image fit="cover" src="//v2.grommet.io/assets/IMG_4245.jpg" />
-            <Image fit="cover" src="//v2.grommet.io/assets/IMG_4210.jpg" />
+            <Image fit="contain" src="/screenshots/admin__client_main__mac-edu.png" />
+            <Image fit="contain" src="/screenshots/admin__client_admin-settings_apps__mac-edu.png" />
+            <Image fit="contain" src="/screenshots/admin__client_admin-settings_bundles_main__mac-edu.png" />
+            <Image fit="contain" src="/screenshots/admin__client_admin-settings_bundles_view-bundle__mac-edu.png" />
           </Carousel>
         </Box>
       </Grid>
