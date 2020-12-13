@@ -2,6 +2,7 @@ import React from 'react'
 import SubscribeForm from './components/SubscribeForm'
 import theme from './theme'
 import {
+  Header,
   Box,
   Grommet, 
   Nav, 
@@ -16,11 +17,14 @@ import {
 
 export default function App() {
   return (
-    <Grommet theme={theme} background='purple' full={true}>
-      <Nav direction="row-reverse" pad="medium">
-        <Anchor label='Contact' hoverIndicator />
-        <Anchor label='What is this?' hoverIndicator />
-      </Nav>
+    <Grommet theme={theme} background='brand-1' full={true}>
+      <Header>
+        <Box background={{'image': 'url(/site-logo.png)', 'size': 'contain'}} height='60px' width='70px' margin='30px 0 0 30px'/>
+        <Nav direction="row-reverse" pad="medium">
+          <Anchor label='Contact' hoverIndicator />
+          <Anchor label='What is this?' hoverIndicator />
+        </Nav>
+      </Header>
       <Grid
       rows={['75vh']}
       columns={['1/2', '1/2']}

@@ -5,7 +5,7 @@ const theme = {
         "dark": '#FFFFFF', 
         "light": '#272A27',
       },
-      'brand': '#282343',
+      'brand-1': '#282343',
       'accent-1': '#3BFF76',
       'grey-1': '#272A27',
       'white': '#FFFFFF',
@@ -47,7 +47,7 @@ const theme = {
   },
   carousel: {
     icons: {
-      color: 'brand-1'
+      color: 'accent-1'
     }
   }
 }
