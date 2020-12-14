@@ -39,7 +39,7 @@ const theme = {
   anchor: {
     color: 'white',
     hover: {
-      textDecoration: 'none',
+      textDecoration: 'underline',
       extend: `{
         color: #3BFF76
       }`
