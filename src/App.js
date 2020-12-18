@@ -1,7 +1,6 @@
 import React from 'react'
 import SubscribeForm from './components/SubscribeForm'
 import InlineAnchor from './components/InlineAnchor'
-import SignUpBtn from './components/SignUpBtn'
 import ComingSoonTip from './components/ComingSoonTip'
 import theme from './theme'
 import { Info, Contact, Favorite } from 'grommet-icons'
@@ -26,9 +25,6 @@ export default function App() {
       <Header>
         <Box background={{'image': 'url(/site-logo.png)', 'size': 'contain', 'opacity': 'medium'}} height='60px' width='70px' margin='30px 0 0 30px'/>
         <Nav direction="row-reverse" pad="medium" align='center'>
-          <ComingSoonTip>
-            <SignUpBtn/>
-          </ComingSoonTip>
           <Anchor label='Contact' href='#contact' hoverIndicator />
           <ComingSoonTip>
             <Anchor label='Explore Bundles' href='#' hoverIndicator />
