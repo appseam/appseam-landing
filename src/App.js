@@ -52,7 +52,7 @@ export default function App() {
           <SubscribeForm/>
         </Box>
         <Box gridArea="carousel">
-          <Carousel controls="selectors" play={5000} fill>
+          <Carousel controls="arrows" play={5000} fill>
             <Image fit="contain" src="/screenshots/admin__client_main__mac-edu.png" />
             <Image fit="contain" src="/screenshots/admin__client_admin-settings_apps__mac-edu.png" />
             <Image fit="contain" src="/screenshots/admin__client_admin-settings_bundles_main__mac-edu.png" />
