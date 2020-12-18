@@ -28,7 +28,7 @@ export default function SubscribeForm() {
             <TextInput id="email-input" name="email" placeholder='Email' value={email} onChange={e => setEmail(e.target.value)}/>
           </FormField>
           <Box direction="row" gap="medium" align='start' height='50px'>
-            <Button disabled={!(email)} primary type="submit" label="Subscribe" />
+            <Button secondary disabled={!(email)} type="submit" label="Subscribe" />
             {submitted && (<Text color="accent-1">Thanks! You've registered with {submittedEmail}. We'll reach out to you as soon as we can.</Text>)}
           </Box>
         </Form>
