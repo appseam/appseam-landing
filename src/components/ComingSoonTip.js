@@ -4,7 +4,6 @@ export default function ComingSoonTip({ children, ...rest }) {
     return (
         <Tip plain content={
             <Box 
-                align='start'
                 margin='small'
                 round='xsmall'
                 background={{color: 'white', opacity: 'weak'}}
