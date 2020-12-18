@@ -18,17 +18,18 @@ export default function SignUpBtn() {
     const [industry, setIndustry] = React.useState('SaaS')
 
     const orgSizes = ['1-5', '5-10', '10-50', '50+']
-    const industries = ['SaaS', 'Consultancy', 'Education', 'Online Store']
+    const industries = ['SaaS', 'Consultancy', 'Education', 'Online Store', 'Other']
 
     return (
       <Box>
         <Button label="Sign Up" primary onClick={() => setShowSignUp(true)} />
         {showSignUp && (
           <Layer
+            margin='small'
             onEsc={() => setShowSignUp(false)}
             onClickOutside={() => setShowSignUp(false)}
           >
-            <Box pad="40px">
+            <Box pad="40px" overflow='auto'>
                 <Form>
                     <FormField required label='Your org name' name="org-name" htmlfor="org-name-input">
                         <TextInput id="org-name-input" name="org-name" placeholder='Seamster Ltd'/>
@@ -55,7 +56,7 @@ export default function SignUpBtn() {
                             onChange={({ option }) => setIndustry(option)}
                         />
                     </FormField>
-                    <Box direction="row-reverse" gap="medium" align='start' height='50px'>
+                    <Box direction="row-reverse" gap="medium" align='start' height='50px' pad='small'>
                         <Button label="Cancel" onClick={() => setShowSignUp(false)} />
                         <Button primary type="submit" label="Sign me up, Scotty!" />
                     </Box>
