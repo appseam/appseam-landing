@@ -52,14 +52,14 @@ export default function App() {
           <SubscribeForm/>
         </Box>
         <Box gridArea="carousel">
-          <Carousel controls="selectors" play={5000} fill>
+          <Carousel controls="arrows" play={5000} fill>
             <Image fit="contain" src="/screenshots/admin__client_main__mac-edu.png" />
             <Image fit="contain" src="/screenshots/admin__client_admin-settings_apps__mac-edu.png" />
             <Image fit="contain" src="/screenshots/admin__client_admin-settings_bundles_main__mac-edu.png" />
             <Image fit="contain" src="/screenshots/admin__client_admin-settings_bundles_view-bundle__mac-edu.png" />
           </Carousel>
         </Box>
-        <Box gridArea="about" id="about" align='center' pad="medium" background={{'color': 'white', 'opacity': 'weak'}}>
+        <Box gridArea="about" id="about" align='center' pad="50px 200px" background={{'color': 'white', 'opacity': 'weak'}}>
           <Info size='large' color='accent-1'/>
           <Heading textAlign='center'>What is this?</Heading>
           <Text textAlign='center' pad='large'>
@@ -68,7 +68,7 @@ export default function App() {
             Instead of asking your team members to go through a checklist of activities to get them setup, you can use Appseam to automate these activities for you.
           </Text>
         </Box>
-        <Box gridArea="contact" id="contact" pad="medium" align='center'>
+        <Box gridArea="contact" id="contact" pad="50px 200px" align='center'>
           <Contact size='large' color='accent-1'/>
           <Heading textAlign='center'>Contact Us</Heading>
           <Text textAlign='center' pad='large'>

@@ -1,3 +1,6 @@
+import { Box } from 'grommet'
+import { CaretNext, CaretPrevious } from 'grommet-icons'
+
 const theme = {
   global: {
     colors: {
@@ -95,7 +98,9 @@ const theme = {
   },
   carousel: {
     icons: {
-      color: 'accent-1'
+      color: 'accent-1',
+      next: () => (<Box pad='small'><CaretNext size='small' color='white'/></Box>),
+      previous: () => (<Box pad='small'><CaretPrevious size='small' color='white'/></Box>)
     }
   }
 }
