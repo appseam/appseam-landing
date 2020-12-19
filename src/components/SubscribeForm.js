@@ -1,5 +1,5 @@
 import React from 'react'
-import urlencode from '../lib/urlencode'
+import urlencode from '../lib/urlEncode'
 import { Box, Form, FormField, Text, TextInput, Button } from 'grommet'
 
 export default function SubscribeForm() {  
