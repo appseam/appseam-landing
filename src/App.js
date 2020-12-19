@@ -17,7 +17,7 @@ import {
   Text,
   Footer
 } from 'grommet'
-
+import SignUpBtn from './components/SignUpBtn'
 
 export default function App() {
   return (
@@ -25,6 +25,7 @@ export default function App() {
       <Header>
         <Box background={{'image': 'url(/site-logo.png)', 'size': 'contain', 'opacity': 'medium'}} height='60px' width='70px' margin='30px 0 0 30px'/>
         <Nav direction="row-reverse" pad="medium" align='center'>
+          <SignUpBtn/>
           <Anchor label='Contact' href='#contact' hoverIndicator />
           <ComingSoonTip>
             <Anchor label='Explore Bundles' href='#' hoverIndicator />
