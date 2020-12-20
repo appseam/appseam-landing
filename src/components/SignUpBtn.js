@@ -67,10 +67,10 @@ export default function SignUpBtn() {
                         <TextInput id="org-owner-email-input" name="org-owner-email" placeholder='you@seamster.com' value={orgOwnerEmail} onChange={e => setOrgOwnerEmail(e.target.value)}/>
                     </FormField>
                     <FormField required label='Password' name="password" htmlfor="password-input">
-                        <TextInput id="password-input" name="password" placeholder='password' secureTextEntry={true} value={password} onChange={e => setPassword(e.target.value)}/>
+                        <TextInput id="password-input" type="password" name="password" placeholder='Password' secureTextEntry={true} value={password} onChange={e => setPassword(e.target.value)}/>
                     </FormField>
                     <FormField required label='Confirm password' name="confirm-password" htmlfor="confirm-password-input" >
-                        <TextInput id="confirm-password-input" name="confirm-password" placeholder='password'/>
+                        <TextInput id="confirm-password-input" type="password" name="confirm-password" placeholder='Confirm password'/>
                     </FormField>
                     <FormField required label='Organisation size' name="org-stage" htmlfor="org-stage-input">
                         <Select
