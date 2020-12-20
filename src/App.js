@@ -23,7 +23,9 @@ export default function App() {
   return (
     <Grommet theme={theme} background='brand-1' full={true}>
       <Header>
-        <Box background={{'image': 'url(/site-logo.png)', 'size': 'contain', 'opacity': 'medium'}} height='60px' width='70px' margin='30px 0 0 30px'/>
+        <Anchor href='/'>
+          <Box background={{'image': 'url(/site-logo.png)', 'size': 'contain', 'opacity': 'medium'}} height='60px' width='70px' margin='30px 0 0 30px'/>
+        </Anchor>
         <Nav direction="row-reverse" pad="medium" align='center'>
           <SignUpBtn/>
           <Anchor label='Contact' href='#contact' hoverIndicator />
