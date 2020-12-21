@@ -1,5 +1,4 @@
 import { Header, Anchor, Box, Nav } from 'grommet'
-// import { Link } from 'react-router-dom';
 
 import SignUpBtn from './SignUpBtn'
 import ComingSoonTip from './ComingSoonTip'
@@ -12,16 +11,14 @@ export default function ANav() {
             </Anchor>
             <Nav direction="row-reverse" pad="medium" align='center'>
             <SignUpBtn/>
-            <Anchor label='Contact' href='#contact' hoverIndicator />
+            <Anchor label='Contact' href='/#contact' hoverIndicator />
             <ComingSoonTip>
-                {/* <Link to='/explore'>Explore */}
-                    <Anchor label='Explore Bundles' href="/explore" hoverIndicator />
-                {/* </Link> */}
+                <Anchor label='Explore Bundles' href="/explore" hoverIndicator />
             </ComingSoonTip>
             <ComingSoonTip>
                 <Anchor label='Blog' href='#' hoverIndicator />
             </ComingSoonTip>
-            <Anchor label='What is this?' href='#about' hoverIndicator />
+            <Anchor label='What is this?' href='/#about' hoverIndicator />
             </Nav>
         </Header>
     )
