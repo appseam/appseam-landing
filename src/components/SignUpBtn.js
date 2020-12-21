@@ -1,6 +1,6 @@
 import React from 'react'
 import firebaseApp from  '../firebaseApp'
-import postJson from '../lib/postData'
+import { post } from '../lib/httpUtils'
 import {
     Layer,
     Box,
@@ -24,7 +24,7 @@ function createOrg(value) {
             })
         })
         .then((res) => {
-            postJson('http://localhost:5000/api/organisation', {
+            post('http://localhost:5000/api/organisation', {
                 'name': value['org-name'], 
                 'industry': value['org-type'],
                 'apps': []
