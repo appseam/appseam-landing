@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import firebaseApp from  '../firebaseApp'
 import { post } from '../lib/httpUtils'
 import {
@@ -35,13 +35,13 @@ function createOrg(value) {
 
 
 export default function SignUpBtn() {
-    const [showSignUp, setShowSignUp] = React.useState(false);
-    const [orgName, setOrgName] = React.useState('')
-    const [orgOwnerFullName, setOrgOwnerFullName] = React.useState('')
-    const [orgOwnerEmail, setOrgOwnerEmail] = React.useState('')
-    const [password, setPassword] = React.useState('')
-    const [orgSize, setOrgSize] = React.useState('1-5')
-    const [industry, setIndustry] = React.useState('SaaS')
+    const [showSignUp, setShowSignUp] = useState(false);
+    const [orgName, setOrgName] = useState('')
+    const [orgOwnerFullName, setOrgOwnerFullName] = useState('')
+    const [orgOwnerEmail, setOrgOwnerEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [orgSize, setOrgSize] = useState('1-5')
+    const [industry, setIndustry] = useState('SaaS')
 
     const orgSizes = ['1-5', '5-10', '10-50', '50+']
     const industries = ['SaaS', 'Consultancy', 'Education', 'Online Store', 'Other']

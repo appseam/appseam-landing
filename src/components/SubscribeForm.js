@@ -1,11 +1,11 @@
-import React from 'react'
+import { useState } from 'react'
 import urlencode from '../lib/urlEncode'
 import { Box, Form, FormField, Text, TextInput, Button } from 'grommet'
 
 export default function SubscribeForm() {  
-    const [submitted, setSubmitted] = React.useState(false)
-    const [email, setEmail] = React.useState('')
-    const [submittedEmail, setSubmittedEmail] = React.useState('')
+    const [submitted, setSubmitted] = useState(false)
+    const [email, setEmail] = useState('')
+    const [submittedEmail, setSubmittedEmail] = useState('')
   
     function sendToNetlify(val) {
       fetch("/", {

@@ -1,17 +1,18 @@
-import React from 'react'
+import { useContext, useEffect } from 'react'
 import { Box } from "grommet";
 
-import { get } from '../lib/httpUtils'
 import BundleCard from '../components/BundleCard';
 
-export default function Explore() {
-    const [bundles, setBundles] = React.useState([])
+import { BundlesContext } from '../contexts'
 
-    React.useEffect(() => {
-        get('http://localhost:5000/api/bundles')
-            .then(res => {
-                setBundles(res.data)
-            })
+export default function Explore() {
+    const { bundles, refreshBundles } = useContext(BundlesContext)
+
+    useEffect(() => {
+        const undefinedBundles = !Array.isArray(bundles) || !bundles.length
+        if (undefinedBundles) {
+            refreshBundles()
+        }
     }, [])
 
     return (
